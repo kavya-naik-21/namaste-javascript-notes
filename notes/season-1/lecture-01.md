@@ -12,7 +12,7 @@
 
 - JS is a **synchronous**, **single-threaded** language
   - Synchronous:- In a specific synchronous order.
-  - Single-threaded:- One command at a time.
+  - Single-threaded:- One command at a time, which means it can go to next line, once the current line has finished executing.
 
 <hr>
 
