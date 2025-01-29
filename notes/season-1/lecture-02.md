@@ -32,7 +32,7 @@ Now, in **2nd phase** i.e. **code execution phase**, it starts going through the
 As it encounters var n = 2, it assigns 2 to 'n'. Until now, the value of 'n' was undefined. 
 In line 2, i.e., For function,  there is nothing to execute. As these lines were already dealt with in memory creation phase.
 
-Coming to line 6 i.e. **var square2 = square(n)**, here function invocation is happening, here **functions are a bit different than any other language, when a function is invoked - A new execution context is created altogether.** Again in this new execution context, in memory creation phase, we allocate memory to num and ans the two variables. And undefined is placed in them. Now, in code execution phase of this execution context, first 2 is assigned to num. Then var ans = num \* num will store 4 in ans. After that, return ans returns the control of program back to where this function was invoked from.
+Coming to line 6 i.e. **var square2 = square(n)**, here function invocation is happening, here **functions are a bit different than any other language, when a function is invoked - A new execution context is created altogether.** Again in this new execution context, in memory creation phase, we allocate memory to num(i.e., **parameters**) and ans the two variables. And undefined is placed in them. Now, in code execution phase of this execution context, first 2 is assigned to num. num \* num will happen in code phase. Then var ans = num \* num will store 4 in ans. After that, return ans returns the control of program back to execution context where this function was invoked from.
 
 ![Execution Context Phase 2](/assets/phase2.jpg "Execution Context")
 
