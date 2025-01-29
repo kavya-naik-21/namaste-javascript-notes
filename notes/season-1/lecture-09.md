@@ -2,8 +2,7 @@
 
 What is a **Block**?
 
-- Block aka _compound statement_ is used to group JS statements together into 1 group. We group them within {...}
-
+- Block aka _compound statement_ is used to combine JS statements together into 1 group. We group them within {...}
   ```js
   {
     var a = 10;
@@ -13,8 +12,18 @@ What is a **Block**?
     // While, var is hoisted in Global scope.
   }
   ```
+- we need to group these statements together so that we can use multiple statements in a place where JS expects only 1 statement
+  - example: if expects a single statement but we want to use multiple statements so we use block
+  ```js
+  if(true) {
+    var a = 10;
+    console.log("a", a)
+  }
+  ```
 
 - Block Scope and its accessibility example
+- Block scope means what all variable we can inside this block
+- ![image](https://github.com/user-attachments/assets/764b6f8a-1749-413c-a0b9-7a4d7d2ad520)
 
   ```js
   {
