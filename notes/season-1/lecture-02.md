@@ -46,6 +46,10 @@ So the **final diagram** before deletion would look something like:
 
 - Call Stack is a mechanism to keep track of its place in script that calls multiple function.
 - Call Stack is like a stack, in the bottom of the stack we have our global execution context,
+ ![image](https://github.com/user-attachments/assets/d8fc3ea3-f678-4161-8dc3-6de021f58a29)
+
+![image](https://github.com/user-attachments/assets/1431ad96-f21e-4cfa-b34c-aea523ef9f4e)
+
   -- That means, whenever any JS program is run, this call stack is populated with this Global execution context. This whole execution context is pushed inside this stack
   -- Whenever a function is invoked, or a new execution context is created, So this execution context is put inside the stack. example E1, which is the execution context 1, Once we are done with executing this function, we return the ans, E1 is moved out. E1 is popped out of the stack, and the control goes back to the global execution context, where it left.
   -- similarly with E2 as well and the control goes back to Global Execution Context (GEC).
