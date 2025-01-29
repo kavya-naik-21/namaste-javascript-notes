@@ -77,7 +77,8 @@ console.log(b); // Error, Not Defined
 - Whenever an Execution Context is created, a Lexical environment(LE) is also created and is referenced in the local Execution Context(in memory space).
 
 - The process of going one by one to parent and checking for values is called scope chain or Lexcial environment chain.
-
+- Lexical Environment of c has access to lexical environment of its parent i.e., a, and lexical environment of its parent i.e., its parent
+- we can assume that orange box to be reference to the lexical env of its parent
 - ```js
   function a() {
     function c() {  // c is lexically inside a
