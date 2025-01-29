@@ -19,7 +19,7 @@ function getName() {
 
 ```js
 getName(); // Namaste JavaScript
-console.log(x); // Uncaught Reference: x is not defined.
+console.log(x); // Uncaught Reference: x is not defined. i.e., x is no where present in the memory
 console.log(getName); // f getName(){ console.log("Namaste JavaScript); }
 function getName() {
   console.log("Namaste JavaScript");
@@ -33,7 +33,8 @@ getName(); // Uncaught TypeError: getName is not a function
 console.log(getName);
 var getName = function () {
   console.log("Namaste JavaScript");
-};
+}; // here getName behaves like another variable and it's value is undefined i.e., getName behaves like a variable
+// i.e., in Memory creation phase getName is assigned with undefined and since it is getName() is done before the code execution of var getName == ..., it throws and error that it is not a function
 // The code won't execute as the first line itself throws an TypeError.
 ```
 
