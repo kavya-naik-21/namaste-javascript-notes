@@ -80,7 +80,7 @@ console.log(b); // Error, Not Defined
 - Lexical Environment of c has access to lexical environment of its parent i.e., a, and lexical environment of its parent i.e., its parent
 - we can assume that orange box to be reference to the lexical env of its parent
 - it tries to search for b inside c, then go to parent (a) searches there if not found goes to gloabl scope and searches there, if found prints it, else returns not defined since reference of lexical environment of global points to null ---> this is called Scope chain
-- Scope Chain - we 
+- Scope Chain - LXE(c) + LXE(a) + LXE(global)
 - ```js
   function a() {
     function c() {  // c is lexically inside a
