@@ -37,6 +37,12 @@ var getName = function () {
 // The code won't execute as the first line itself throws an TypeError.
 ```
 
+- We can see in the broswers inspect  - Global Scope - Memory 
+  x will be assigned undefined, in Memory creation phase
+  function getName() will be defined with the whole definition, in Memory creation phase
+![image](https://github.com/user-attachments/assets/9662d3f8-e28a-4e5a-a73a-f9ec40237a4b)
+
+
 <hr>
 
 Watch Live On Youtube below:
