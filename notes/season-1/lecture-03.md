@@ -43,6 +43,10 @@ var getName = function () {
   function getName() will be defined with the whole definition, in Memory creation phase
 ![image](https://github.com/user-attachments/assets/9662d3f8-e28a-4e5a-a73a-f9ec40237a4b)
 
+- Call stack creation can be seen below
+![image](https://github.com/user-attachments/assets/6d282749-b59e-460b-8805-eb5ada696fa9)
+
+
 
 <hr>
 
