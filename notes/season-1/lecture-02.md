@@ -18,16 +18,21 @@ function square(num) {
 var square2 = square(n);
 var square4 = square(4);
 ```
+When we execute the above code, execution context is created, 
+Execution context is created in 2 phases
 
-The very **first** thing which JS does is **memory creation phase**, so it goes to line one of above code snippet, and **allocates a memory space** for variable **'n'** and then goes to line two, and **allocates a memory space** for **function 'square'**. When allocating memory **for n it stores 'undefined'**, a special value for 'n'. **For 'square', it stores the whole code of the function inside its memory space.** Then, as square2 and square4 are variables as well, it allocates memory and stores 'undefined' for them, and this is the end of first phase i.e. memory creation phase.
+The very **first** thing which JS does is **memory creation phase**, so it goes to line 1 of above code snippet, and **allocates a memory space** for variable **'n'** and then goes to line two, and **allocates a memory space** for **function 'square'**. When allocating memory **for n it stores 'undefined'**, a special value for 'n'. **For 'square', it stores the whole code of the function inside its memory space.** Then, as square2 and square4 are variables as well, it allocates memory and stores 'undefined' for them, and this is the end of first phase i.e. memory creation phase.
 
 So O/P will look something like
 
 ![Execution Context Phase 1](/assets/phase1.jpg "Execution Context")
 
-Now, in **2nd phase** i.e. code execution phase, it starts going through the whole code line by line. As it encounters var n = 2, it assigns 2 to 'n'. Until now, the value of 'n' was undefined. For function, there is nothing to execute. As these lines were already dealt with in memory creation phase.
+Now, in **2nd phase** i.e. **code execution phase**, it starts going through the whole code line by line. This is the point where functions and every calculation in the program is done.
 
-Coming to line 6 i.e. **var square2 = square(n)**, here **functions are a bit different than any other language. A new execution context is created altogether.** Again in this new execution context, in memory creation phase, we allocate memory to num and ans the two variables. And undefined is placed in them. Now, in code execution phase of this execution context, first 2 is assigned to num. Then var ans = num \* num will store 4 in ans. After that, return ans returns the control of program back to where this function was invoked from.
+As it encounters var n = 2, it assigns 2 to 'n'. Until now, the value of 'n' was undefined. 
+In line 2, i.e., For function,  there is nothing to execute. As these lines were already dealt with in memory creation phase.
+
+Coming to line 6 i.e. **var square2 = square(n)**, here function invocation is happening, here **functions are a bit different than any other language, when a function is invoked - A new execution context is created altogether.** Again in this new execution context, in memory creation phase, we allocate memory to num and ans the two variables. And undefined is placed in them. Now, in code execution phase of this execution context, first 2 is assigned to num. Then var ans = num \* num will store 4 in ans. After that, return ans returns the control of program back to where this function was invoked from.
 
 ![Execution Context Phase 2](/assets/phase2.jpg "Execution Context")
 
