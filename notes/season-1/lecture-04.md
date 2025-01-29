@@ -4,7 +4,7 @@
 var x = 1;
 a();
 b(); // we are calling the functions before defining them. This will work properly, as seen in Hoisting.
-console.log(x); // 3
+console.log(x); // 3;
 
 function a() {
   var x = 10; // localscope because of separate execution context
