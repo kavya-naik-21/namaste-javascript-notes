@@ -34,7 +34,7 @@ console.log(getName);
 var getName = function () {
   console.log("Namaste JavaScript");
 }; // here getName behaves like another variable and it's value is undefined i.e., getName behaves like a variable
-// i.e., in Memory creation phase getName is assigned with undefined and since it is getName() is done before the code execution of var getName == ..., it throws and error that it is not a function
+// i.e., in Memory creation phase getName is assigned with undefined and since getName() is called before the code execution of var getName == ..., it throws error that it is not a function
 // The code won't execute as the first line itself throws an TypeError.
 ```
 
