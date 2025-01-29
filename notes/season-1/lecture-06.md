@@ -9,8 +9,8 @@
 - Not Defined !== Undefined
 
 > When variable is declared but not assigned value, its current value is **undefined**. But when the variable itself is not declared but called in code, then it is **not defined**.
-> **not defined** doesn't have any memory allocated
-> **undefined** !== "empty", undefined is a special keyword which we are assuming to be a place holder until the variable is assigned some value, undefined has some memory assigned
+- **not defined** doesn't have any memory allocated
+-  **undefined** !== "empty", undefined is a special keyword which we are assuming to be a place holder until the variable is assigned some value, undefined has some memory assigned
 ```js
 console.log(x); // undefined
 var x = 25;
