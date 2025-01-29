@@ -42,11 +42,17 @@ So the **final diagram** before deletion would look something like:
 
 ![Execution Context Phase 2](/assets/final_execution_context.jpg "Execution Context")
 
-- Javascript manages code execution context creation and deletion with the the help of **Call Stack**.
+- Javascript manages code execution context creation and deletion with the the help of **Call Stack**. JS has it's own callstack
 
 - Call Stack is a mechanism to keep track of its place in script that calls multiple function.
-
-- Call Stack maintains the order of execution of execution contexts. It is also known as Program Stack, Control Stack, Runtime stack, Machine Stack, Execution context stack.
+- Call Stack is like a stack, in the bottom of the stack we have our global execution context,
+  -- That means, whenever any JS program is run, this call stack is populated with this Global execution context. This whole execution context is pushed inside this stack
+  -- Whenever a function is invoked, or a new execution context is created, So this execution context is put inside the stack. example E1, which is the execution context 1, Once we are done with executing this function, we return the ans, E1 is moved out. E1 is popped out of the stack, and the control goes back to the global execution context, where it left.
+  -- similarly with E2 as well and the control goes back to Global Execution Context (GEC).
+  --  this call stack is only for managing these Execution contexts.
+  --  whenever an Execution context is deleted, it will move out of the stack.
+  -- After this whole thing is executed, the call stack gets empty.
+- Core Concept - Call Stack maintains the order of execution of execution contexts. It is also known as Program Stack or Control Stack or Runtime stack or Machine Stack or Execution context stack.
 
 <hr>
 
