@@ -80,10 +80,10 @@ console.log(b); // Error, Not Defined
 
 - ```js
   function a() {
-    function c() {
+    function c() {  // c is lexically inside a
       // logic here
     }
-    c(); // c is lexically inside a
+    c();
   } // a is lexically inside global execution
   ```
 
