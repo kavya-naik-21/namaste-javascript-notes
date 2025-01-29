@@ -70,7 +70,7 @@ console.log(b); // Error, Not Defined
 
 <br>
 
-- So, **Lexical Environment** = local memory + lexical env of its parent. Hence, Lexical Environement is the local memory along with the lexical environment of its parent
+- So, **Lexical Environment** = local memory + reference to the lexical env of its parent. Hence, Lexical Environement is the local memory along with the lexical environment of its parent
 
 - **Lexical**: In hierarchy, In order
 
@@ -79,6 +79,8 @@ console.log(b); // Error, Not Defined
 - The process of going one by one to parent and checking for values is called scope chain or Lexcial environment chain.
 - Lexical Environment of c has access to lexical environment of its parent i.e., a, and lexical environment of its parent i.e., its parent
 - we can assume that orange box to be reference to the lexical env of its parent
+- it tries to search for b inside c, then go to parent (a) searches there if not found goes to gloabl scope and searches there, if found prints it, else returns not defined since reference of lexical environment of global points to null ---> this is called Scope chain
+- Scope Chain - we 
 - ```js
   function a() {
     function c() {  // c is lexically inside a
