@@ -32,6 +32,9 @@
       ------------------
       let a = 10;
       var a = 100; // this code also rejected upfront as SyntaxError. (can't use same name in same scope)
+      ----------------------
+      var a = 2000;
+      var a = 20; // this doesnot throw any error
     ```
 
 - **Let** is a stricter version of **var**. Now, **const** is even more stricter than **let**.
