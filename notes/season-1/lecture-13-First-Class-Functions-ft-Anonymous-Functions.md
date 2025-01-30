@@ -56,6 +56,7 @@ function () {
 
 - They don't have their own identity. So an anonymous function without code inside it results in an error.
 - Anonymous functions are used when functions are used as values eg. the code sample for **function expression** above.
+- in **function statements** cannot you cannot use anonymous functions
 
 ### Q: What is Named Function Expression?
 
@@ -84,6 +85,10 @@ b(arg1, arg2); // arguments - values passed inside function call
 
 We can pass functions inside a function as arguments and
 /or return a function(HOF). These ability are altogether known as First class function. It is programming concept available in some other languages too.
+- function can be passed as arguments
+- function can be returned
+- function can be assigned as value
+- i.e, the ability to use functions as values is called first class functions - ie., passed as args and can be returned as well
 
 ```js
 var b = function (param1) {
