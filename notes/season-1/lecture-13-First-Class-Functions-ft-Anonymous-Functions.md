@@ -105,6 +105,120 @@ var b = function (param1) {
 console.log(b()); //we log the entire fun within b.
 ```
 
+
+
+# Function Definition vs Function Statement vs Function Declaration in JavaScript
+
+## 1️⃣ Function Definition
+A **function definition** refers to the entire syntax used to define a function, regardless of the way it is defined (declaration, expression, arrow function, etc.).
+
+### Example:
+```js
+function greet() {
+    console.log("Hello, World!");
+}
+```
+- The entire function, including its name, parameters, and body, is the **function definition**.
+
+### Memory Allocation:
+- Function definitions are stored in memory differently depending on how they are declared:
+  - **Function Declarations**: Stored in memory during the creation phase and hoisted, allowing usage before definition.
+  - **Function Expressions & Arrow Functions**: Memory is allocated during execution, meaning they cannot be used before their assignment.
+
+---
+
+## 2️⃣ Function Declaration (Function Statement)
+A **function declaration** (also called a **function statement**) defines a function using the `function` keyword without assigning it to a variable.
+
+### Example:
+```js
+function sayHello() {
+    console.log("Hello!");
+}
+```
+
+### Key Characteristics:
+✔ **Named function**  
+✔ **Hoisted** (can be called before its definition)  
+✔ Stored in memory during the creation phase  
+
+### Memory Allocation:
+- In the **memory creation phase**, JavaScript allocates memory for function declarations and stores the function entirely.
+- Function declarations are **hoisted**, meaning they can be used before their definition.
+
+#### Example of Hoisting:
+```js
+sayHello(); // ✅ Works due to hoisting
+
+function sayHello() {
+    console.log("Hello!");
+}
+```
+
+---
+
+## 3️⃣ Function Expression
+A **function expression** is when a function is assigned to a variable.
+
+### Example:
+```js
+const greet = function() {
+    console.log("Hello, User!");
+};
+```
+
+### Key Characteristics:
+✔ **Anonymous function** (in most cases)  
+✔ **Not hoisted** (Cannot be used before definition)  
+✔ Stored in memory at runtime  
+
+### Memory Allocation:
+- During the **memory creation phase**, JavaScript allocates memory for the variable `greet`, but assigns it `undefined`.
+- The function definition is stored in memory **only during execution**.
+
+#### Example of Hoisting Issue:
+```js
+greet(); // ❌ Error: greet is not a function
+
+const greet = function() {
+    console.log("Hello!");
+};
+```
+> The function is stored in memory **only when execution reaches this line**, not during the initial memory allocation phase.
+
+---
+
+## 4️⃣ Arrow Function (Function Expression)
+Arrow functions are another form of **function expression** with a concise syntax.
+
+### Example:
+```js
+const add = (a, b) => a + b;
+```
+
+### Memory Allocation:
+- Like normal function expressions, arrow functions are **not hoisted**.
+- They are assigned to variables and stored **only during execution**.
+
+---
+
+## 🔥 Summary Table
+| Feature                | Function Declaration (Statement) | Function Expression | Arrow Function |
+|------------------------|--------------------------------|----------------------|---------------|
+| **Hoisting**           | ✅ Yes                         | ❌ No                 | ❌ No          |
+| **Memory Allocation**  | Stored in memory in creation phase | Assigned at execution | Assigned at execution |
+| **Usage before definition** | ✅ Allowed | ❌ Not allowed | ❌ Not allowed |
+| **Anonymous**         | ❌ No (Has a name)             | ✅ Mostly anonymous (Named function expressions are also possible) | ✅ Always anonymous |
+| **Syntax**            | `function name() {}`          | `const name = function() {}` | `const name = () => {}` |
+
+---
+
+## Final Takeaway
+- **Function Declaration (Function Statement)**: Hoisted and stored in memory before execution.
+- **Function Expression**: Assigned at execution, not hoisted.
+- **Arrow Function**: Similar to function expressions, assigned at execution.
+
+
 <hr>
 
 Watch Live On Youtube below:
