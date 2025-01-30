@@ -35,6 +35,21 @@ outer()(); // 10
 
 ```js
 function outer() {
+  function inner() {
+    console.log(a);
+  }
+  let a = 10;
+  return inner;
+}
+outer()(); // 10
+```
+
+**Ans**: It will still behave the same way.
+
+### Q3: Changing var to let, will it make any difference?
+
+```js
+function outer() {
   let a = 10;
   function inner() {
     console.log(a);
