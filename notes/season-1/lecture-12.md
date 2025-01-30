@@ -119,7 +119,7 @@ outest()("Hello There")(); // 10 20 "Hello There"
 
 - Module Design Pattern
 - Currying
-- Memoize
+- Memoize, once
 - Data hiding and encapsulation
 - setTimeouts etc.
 
@@ -185,13 +185,14 @@ counter1.incrementCounter();
 counter1.decrementCounter();
 // returns 1 2 1
 ```
+> Constructor function
 
 ### Q9: Disadvantage of closure?
 
 **Ans**: Overconsumption of memory when using closure as everytime as those closed over variables are not garbage collected till program expires.
 So when creating many closures, more memory is accumulated and this can create memory leaks if not handled.
 
-**Garbage collector** : Program in JS engine or browser that frees up unused memory. In highlevel languages like C++ or JAVA, garbage collection is left to the programmer, but in JS engine its done implicitly.
+**Garbage collector** : Program in JS engine or browser that frees up unused/unutilized memory. In highlevel languages like C++ or JAVA, garbage collection is left to the programmer, but in JS engine its done implicitly. Whenever there is unused variable in JS, it just frees up the memory when it finds out these variables are unused
 
 ```js
 function a() {
