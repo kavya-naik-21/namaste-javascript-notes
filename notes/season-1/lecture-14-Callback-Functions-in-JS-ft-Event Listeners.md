@@ -93,6 +93,19 @@ setTimeout(function () {
 
 - Event listeners are heavy as they form closures. So even when call stack is empty, EventListener won't free up memory allocated to count as it doesn't know when it may need count again. So we remove event listeners when we don't need them (garbage collected) onClick, onHover, onScroll all in a page can slow it down heavily.
 
+  ```js
+  const button = document.querySelector('button');
+
+  // Add event listener
+  const handleClick = () => {
+    console.log('Button clicked!');
+    // Remove event listener after it’s triggered once
+    button.removeEventListener('click', handleClick);
+  };
+  
+  button.addEventListener('click', handleClick);
+
+  ```
 <hr>
 
 Watch Live On Youtube below:
